@@ -11,7 +11,7 @@
         </field>
     </record>
 
-    <record id="view_approval_limit_form" model="ir.ui.view">
+   <record id="view_approval_limit_form" model="ir.ui.view">
         <field name="name">purchase.approval.limit.form</field>
         <field name="model">purchase.approval.limit</field>
         <field name="arch" type="xml">
@@ -19,13 +19,14 @@
                 <sheet>
                     <group>
                         <field name="group_id"/>
-                        <field name="amount_limit"/>
+                        <field name="amount_limit" />
+                        <field name="is_unlimited"/>
+                        <field name="currency_id"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-
     <!-- Action -->
     <record id="action_approval_limit" model="ir.actions.act_window">
         <field name="name">Approval Limits</field>
