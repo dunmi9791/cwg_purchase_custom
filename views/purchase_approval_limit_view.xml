@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_approval_limit_tree" model="ir.ui.view">
+        <field name="name">purchase.approval.limit.tree</field>
+        <field name="model">purchase.approval.limit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="group_id"/>
+                <field name="amount_limit"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_approval_limit_form" model="ir.ui.view">
+        <field name="name">purchase.approval.limit.form</field>
+        <field name="model">purchase.approval.limit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="group_id"/>
+                        <field name="amount_limit"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_approval_limit" model="ir.actions.act_window">
+        <field name="name">Approval Limits</field>
+        <field name="res_model">purchase.approval.limit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem -->
+    <menuitem id="menu_purchase_config" name="Configuration" parent="purchase.menu_purchase_config"/>
+
+    <menuitem id="menu_purchase_approval_limit"
+              name="Approval Limits"
+              parent="menu_purchase_config"
+              action="action_approval_limit"/>
+</odoo>

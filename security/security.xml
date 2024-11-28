@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Procurement Officer Group -->
+        <record id="group_procurement_officer" model="res.groups">
+            <field name="name">Procurement Officer</field>
+        </record>
+        <!-- Head of Procurement Group -->
+        <record id="group_head_procurement" model="res.groups">
+            <field name="name">Head of Procurement</field>
+        </record>
+        <!-- Head of Finance Group -->
+        <record id="group_head_finance" model="res.groups">
+            <field name="name">Head of Finance</field>
+        </record>
+        <!-- CFO Group -->
+        <record id="group_cfo" model="res.groups">
+            <field name="name">CFO</field>
+        </record>
+        <!-- COO Group -->
+        <record id="group_coo" model="res.groups">
+            <field name="name">COO</field>
+        </record>
+        <!-- CEO Group -->
+        <record id="group_ceo" model="res.groups">
+            <field name="name">CEO</field>
+        </record>
+    </data>
+</odoo>
